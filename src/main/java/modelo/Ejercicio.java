@@ -1,18 +1,21 @@
+package modelo;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package application;
 
 /**
  *
  * @author faisu
  */
-public class properties {
+public class Ejercicio {
     
-    /*
-    db.url=jdbc:sqlserver://localhost:1433;databaseName=simulapdb
-    db.username=sa
-    db.password=Pwd1234.*/
-   
+    private int id;
+    private String nombre;
+    private String descripcion;
+    private String imagen;
+
+    // Constructor, getters y setters
+    
 }
