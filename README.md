@@ -22,3 +22,7 @@ Quan es clica a un usuari, han de sortir els entrenaments que realitza:
 I si es clica l'entrenament, han de sortir les seves especificacions:
 
 ![Entrenament Screen](/images/Entrenament.png)
+
+Aquests sketches son molt senzills peró no vull que l'UI de l'aplicació sigui molt complexa.
+Potser canviaré el color de fons de blau a gris clar.
+
