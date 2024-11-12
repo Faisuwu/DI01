@@ -1,5 +1,5 @@
 //Antoni Maqueda Bestard - DI01 - Usuario
-package modelo;
+package model;
 
 public class Usuari {
     
@@ -22,7 +22,9 @@ public class Usuari {
     public String getNom() { return name; }
     public void setNom(String name) { this.name = name; }
     
-    public Boolean getInstructorNom() { return instructor; }
+    public Boolean isInstructor() { return instructor; }
     public void setInstructor (Boolean instructor) { this.instructor = instructor; }
+    
+  
     
 }

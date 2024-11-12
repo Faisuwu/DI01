@@ -1,8 +1,8 @@
 package application;
 
-import modelo.Ejercicio;
-import modelo.Usuari;
-import modelo.Workout;
+import model.Exercici;
+import model.Usuari;
+import model.Workout;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
