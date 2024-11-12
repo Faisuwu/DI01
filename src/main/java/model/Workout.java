@@ -1,4 +1,4 @@
-//Antoni Maqueda Bestard - DI01 - Entrenamiento
+//Antoni Maqueda Bestard - DI01 - Workout
 package model;
 
 import java.time.LocalDate;
@@ -9,6 +9,7 @@ public class Workout {
     private String name;
     private String date;
     private int userId;
+    private String comments;
 
     // Getters y Setters
     public int getId() { return id; }
@@ -22,4 +23,7 @@ public class Workout {
 
     public int getIdUsuari() { return userId; }
     public void setIdUsuari(int userId) { this.userId = userId; }
+    
+    public String getComments() { return comments; }
+    public void setComments(String comments) { this.comments = comments; }
 }

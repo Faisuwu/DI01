@@ -15,18 +15,18 @@ import java.util.Properties;
  *
  * @author Mike
  */
-public class DataAcces {
+public class DataAccess {
 
     private static Connection getConnection() {
         Connection connection = null;
         Properties properties = new Properties();
         try {
-            //properties.load(DataAccess.class.getClassLoader().getResourceAsStream("properties/application.properties"));
-            //connection = DriverManager.getConnection(properties.getProperty("connectionUrl"));
+            properties.load(DataAccess.class.getClassLoader().getResourceAsStream("properties/application.properties"));
+            connection = DriverManager.getConnection(properties.getProperty("connectionUrl"));
             String connectionUrl = "jdbc:sqlserver://localhost:1433;database=simulapdb;user=sa;password=Pwd1234.;encrypt=false;loginTimeout=10;";
             String connectionUrlAzure = "jdbc:sqlserver://simulapdbserver.database.windows.net:1433;database=simulapdb;user=simulapdbadmin@simulapdbserver;password=Pwd1234.;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
-            //connection = DriverManager.getConnection(connectionUrl);
+            connection = DriverManager.getConnection(connectionUrl);
             connection = DriverManager.getConnection(connectionUrlAzure);
 
         } catch (Exception e) {

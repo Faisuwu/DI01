@@ -1,4 +1,4 @@
-//Antoni Maqueda Bestard - DI01 - Usuario
+//Antoni Maqueda Bestard - DI01 - Usuari
 package model;
 
 public class Usuari {

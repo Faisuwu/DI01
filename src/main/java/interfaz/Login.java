@@ -1,7 +1,7 @@
 //Antoni Maqueda Bestard - DI01 - Login
 package interfaz;
 
-import servicio.Autenticacion;
+/*import servicio.Autenticacion;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,4 +14,4 @@ public class Login extends JDialog {
 
     public Login(JFrame parent) {
     }
-}
+}*/

@@ -1,4 +1,4 @@
-//Antoni Maqueda Bestard - DI01 - Ejercicio
+//Antoni Maqueda Bestard - DI01 - Exercici
 package model;
 
 public class Exercici {
@@ -6,7 +6,7 @@ public class Exercici {
      private int id;
     private String name;
     private String description;
-    private String imagePath; // Ruta a la imagen del ejercicio
+    private String imagePath;
 
     // Getters y Setters
     public int getId() { return id; }
