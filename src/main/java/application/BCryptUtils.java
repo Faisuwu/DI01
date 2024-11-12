@@ -1,7 +1,7 @@
 //Antoni Maqueda Bestard - DI01 - BCryptUtils
 package application;
 
-//importar BCrypt;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class BCryptUtils {
     public static String hash(String password) {

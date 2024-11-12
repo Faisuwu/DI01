@@ -10,12 +10,12 @@
         <maven.compiler.release>20</maven.compiler.release>
         <exec.mainClass>com.mycompany.di01.antonimaqueda.DI01AntoniMaqueda</exec.mainClass>
     </properties>
-    <!--
-    <dependency>
+    <dependencies>
+        <dependency>
         <groupId>at.favre.lib</groupId>
         <artifactId>bcrypt</artifactId>
         <version>0.10.2</version>
     </dependency>
-    -->
-    
+    </dependencies>
+   
 </project>

@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 
 public class MainJFrame extends JFrame {
     private JPanel mainPanel;
-    private UsuarioPanel usuarioPanel;
-    private EntrenamientoPanel entrenamientoPanel;
+    private UsuariPanel usuarioPanel;
+    private WorkoutPanel entrenamientoPanel;
     private JMenuBar menuBar;
     
 }

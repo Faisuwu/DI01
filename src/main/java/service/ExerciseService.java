@@ -8,5 +8,4 @@ public class ExerciseService {
     public List<Exercici> getAllExercises() {
         return DataAccess.getAllExercicis();
     }
-
 }
