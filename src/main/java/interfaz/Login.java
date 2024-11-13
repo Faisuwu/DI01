@@ -11,6 +11,7 @@ public class Login extends JDialog {
     private JTextField emailField;
     private JPasswordField passwordField;
     private JButton loginButton;
+    private boolean isAuthenticated = false;
 
     public Login(JFrame parent) {
         super(parent, "Login", true);
@@ -59,9 +60,25 @@ public class Login extends JDialog {
 
         if (authService.login(email, password)) {
             JOptionPane.showMessageDialog(this, "Login successful!");
+            isAuthenticated = true;
             dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Invalid credentials, please try again.");
+            isAuthenticated = false;
         }
+    }
+    
+    //Métodes per accedir al email i la contrasenya
+    public String getEmail() {
+        return emailField.getText();
+    }
+
+    public String getPassword() {
+        return new String(passwordField.getPassword());
+    }
+
+    //Métode per saber si ha funcionat el login
+    public boolean isAuthenticated() {
+        return isAuthenticated;
     }
 }

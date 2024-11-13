@@ -32,12 +32,17 @@ public class WorkoutPanel extends JPanel {
 
         JButton addButton = new JButton("Afegir Workout");
         addButton.addActionListener(e -> addWorkout());
+        
+        JButton editButton = new JButton("Editar Workout");
+        editButton.addActionListener(e -> editWorkout());
+
 
         JButton deleteButton = new JButton("Eliminar Workout");
         deleteButton.addActionListener(e -> deleteWorkout());
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
         buttonPanel.add(addButton);
+        buttonPanel.add(editButton);
         buttonPanel.add(deleteButton);
         add(buttonPanel, BorderLayout.SOUTH);
     }
@@ -65,6 +70,21 @@ public class WorkoutPanel extends JPanel {
             
             workoutService.createWorkout(newWorkout, exercicis);
             loadWorkouts(newWorkout.getIdUsuari()); // Actualitzam la llista de workouts
+        }
+    }
+    
+    //Métode per editar un workout existent
+    private void editWorkout() {
+        Workout selectedWorkout = workoutList.getSelectedValue();
+        if (selectedWorkout != null) {
+            String newWorkoutName = JOptionPane.showInputDialog(this, "Nom del workout a editar:", selectedWorkout.getName());
+            if (newWorkoutName != null && !newWorkoutName.isEmpty()) {
+                selectedWorkout.setName(newWorkoutName);
+                workoutService.updateWorkout(selectedWorkout);
+                loadWorkouts(selectedWorkout.getIdUsuari());
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Selecciona un workout per editar");
         }
     }
         
