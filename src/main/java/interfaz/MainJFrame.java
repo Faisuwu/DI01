@@ -8,12 +8,12 @@ import java.awt.event.ActionListener;
 
 public class MainJFrame extends JFrame {
     private UsuariPanel userListPanel;
-    private WorkoutListPanel workoutListPanel;
-    private ExerciseManagementPanel exercisePanel;
+    private WorkoutPanel workoutListPanel;
+    private ExercisePanel exercisePanel;
     private JMenuBar menuBar;
     private JMenu fileMenu, helpMenu;
 
-    public MainFrame() {
+    public MainJFrame() {
         setTitle("Gestión de Entrenamientos");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,21 +33,12 @@ public class MainJFrame extends JFrame {
         exitMenuItem.addActionListener(e -> System.exit(0));
         fileMenu.add(exitMenuItem);
 
-        // Menú Ayuda
-        helpMenu = new JMenu("Help");
-        JMenuItem aboutMenuItem = new JMenuItem("About");
-        aboutMenuItem.addActionListener(e -> showAbout());
-        helpMenu.add(aboutMenuItem);
-
-        menuBar.add(fileMenu);
-        menuBar.add(helpMenu);
-        setJMenuBar(menuBar);
     }
 
     private void initComponents() {
-        userListPanel = new UserListPanel();
-        workoutListPanel = new WorkoutListPanel();
-        exercisePanel = new ExerciseManagementPanel();
+        userListPanel = new UsuariPanel();
+        workoutListPanel = new WorkoutPanel();
+        exercisePanel = new ExercisePanel();
 
         userListPanel.setBounds(10, 10, 200, 500);
         workoutListPanel.setBounds(220, 10, 300, 500);
@@ -59,12 +50,12 @@ public class MainJFrame extends JFrame {
     }
 
     private void showAbout() {
-        JOptionPane.showMessageDialog(this, "App creada por [Tu Nombre]. Curso DI01 24-25.");
+        JOptionPane.showMessageDialog(this, "App feta per: Antoni Maqueda");
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            MainFrame mainFrame = new MainFrame();
+            MainJFrame mainFrame = new MainJFrame();
             mainFrame.setVisible(true);
         });
     }

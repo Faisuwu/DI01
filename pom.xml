@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>20</maven.compiler.release>
-        <exec.mainClass>com.mycompany.di01.antonimaqueda.DI01AntoniMaqueda</exec.mainClass>
+        <exec.mainClass>interfaz.MainJFrame</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>

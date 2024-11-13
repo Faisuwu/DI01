@@ -2,8 +2,8 @@
 package service;
 
 import model.Usuari;
-import application.BCryptUtils;
-import application.DataAccess;
+import conection.BCryptUtils;
+import conection.DataAccess;
 
 public class AuthService {
     public boolean login(String email, String password) {

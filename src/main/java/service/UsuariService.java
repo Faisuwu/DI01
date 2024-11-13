@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+//Antoni Maqueda Bestard - DI01 - UsuariService
 package service;
 
-/**
- *
- * @author faisu
- */
+import model.Usuari;
+import model.Workout;
+import java.util.List;
+import conection.DataAccess;
+
 public class UsuariService {
-    
+    public  List<Workout> getWorkoutsByUser(Usuari user) {
+        return DataAccess.getWorkoutsPerUser(user);
+    }
+    public List<Usuari> getAllUsers(){
+        return DataAccess.getAllUsers();
+    }
 }

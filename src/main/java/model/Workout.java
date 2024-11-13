@@ -1,8 +1,6 @@
 //Antoni Maqueda Bestard - DI01 - Workout
 package model;
 
-import java.time.LocalDate;
-
 public class Workout {
     
     private int id;
