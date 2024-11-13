@@ -14,7 +14,7 @@ public class MainJFrame extends JFrame {
     private JMenu fileMenu, helpMenu;
 
     public MainJFrame() {
-        setTitle("Gestión de Entrenamientos");
+        setTitle("Gestió de Entrenaments");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
@@ -24,35 +24,40 @@ public class MainJFrame extends JFrame {
         initComponents();
     }
 
-    private void initMenu() {
-        menuBar = new JMenuBar();
+    //Iniciam el menú principal
+   private void initMenu() {
+    menuBar = new JMenuBar();
 
-        // Menú Archivo
-        fileMenu = new JMenu("File");
-        JMenuItem exitMenuItem = new JMenuItem("Exit");
-        exitMenuItem.addActionListener(e -> System.exit(0));
-        fileMenu.add(exitMenuItem);
+    fileMenu = new JMenu("File");
+    JMenuItem exitMenuItem = new JMenuItem("Exit");
+    exitMenuItem.addActionListener(e -> System.exit(0));
+    fileMenu.add(exitMenuItem);
+    menuBar.add(fileMenu);
 
-    }
+    helpMenu = new JMenu("Help");
+    menuBar.add(helpMenu);
 
+    setJMenuBar(menuBar);
+    
+   }   
+
+   //Iniciam tots els altres components
     private void initComponents() {
-        userListPanel = new UsuariPanel();
-        workoutListPanel = new WorkoutPanel();
-        exercisePanel = new ExercisePanel();
+    userListPanel = new UsuariPanel();
+    workoutListPanel = new WorkoutPanel();
+    exercisePanel = new ExercisePanel();
 
-        userListPanel.setBounds(10, 10, 200, 500);
-        workoutListPanel.setBounds(220, 10, 300, 500);
-        exercisePanel.setBounds(530, 10, 250, 500);
+    JPanel mainPanel = new JPanel();
+    mainPanel.setLayout(new GridLayout(1, 3, 10, 0));
 
-        add(userListPanel);
-        add(workoutListPanel);
-        add(exercisePanel);
+    mainPanel.add(userListPanel);
+    mainPanel.add(workoutListPanel);
+    mainPanel.add(exercisePanel);
+
+    add(mainPanel, BorderLayout.CENTER);
     }
 
-    private void showAbout() {
-        JOptionPane.showMessageDialog(this, "App feta per: Antoni Maqueda");
-    }
-
+    //El Main
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             MainJFrame mainFrame = new MainJFrame();

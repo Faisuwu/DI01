@@ -5,6 +5,7 @@ import model.Usuari;
 import conection.BCryptUtils;
 import conection.DataAccess;
 
+//Lógica per comprobar que l'usuari ha introduit la contrasenya correcta
 public class AuthService {
     public boolean login(String email, String password) {
         Usuari user = DataAccess.getUser(email);

@@ -20,13 +20,14 @@ public class UsuariPanel extends JPanel {
         loadUsers();
     }
 
+    //Iniciam els components
     private void initComponents() {
         setLayout(new BorderLayout());
         userModel = new DefaultListModel<>();
         userList = new JList<>(userModel);
         add(new JScrollPane(userList), BorderLayout.CENTER);
 
-        JButton refreshButton = new JButton("Refresh Users");
+        JButton refreshButton = new JButton("Refrescar");
         refreshButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,6 +37,7 @@ public class UsuariPanel extends JPanel {
         add(refreshButton, BorderLayout.SOUTH);
     }
 
+    //Càrregam els usuaris
     private void loadUsers() {
         List<Usuari> users = userService.getAllUsers();
         userModel.clear();

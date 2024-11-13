@@ -21,6 +21,7 @@ public class Login extends JDialog {
         initComponents();
     }
 
+    //Iniciam els components de la pantalla de login
     private void initComponents() {
         JLabel emailLabel = new JLabel("Email:");
         emailLabel.setBounds(20, 20, 80, 25);
@@ -50,6 +51,7 @@ public class Login extends JDialog {
         });
     }
 
+    //Lógica per realitzar el login
     private void login() {
         String email = emailField.getText();
         String password = new String(passwordField.getPassword());
